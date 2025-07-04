@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    <h4>{{problem.title}}</h4>
+    <input type="hidden" name="id" value="{{problem.id}}">
+    <p>{{problem.description}}</p>
+    {%if problem.image_url%}
+        <img src="static/{{problem.image_url}}">
+    {%endif%}
+    <button type="submit">Взяти в роботу</button>
+</form>
+<h5>{{message}}</h5>
+</body>
+</html>

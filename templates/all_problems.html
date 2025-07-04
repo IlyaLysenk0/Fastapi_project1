@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Актуальні запити:</h2>
+{%for i in problems%}
+    <form action="/problem">
+    <h4>{{i.title}}</h4>
+    <small>{{i.date_created}}</small>
+    <input type="hidden" name="problem_id" value="{{i.id}}">
+    <button type="submit">Переглянути</button>
+    </form>
+{%endfor%}
+</body>
+</html>

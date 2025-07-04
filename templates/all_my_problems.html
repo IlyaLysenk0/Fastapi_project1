@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{%for i in problems%}
+<h3>{{i.title}}</h3>
+<p>{{i.description}}</p>
+<small>{{i.date_created}}</small>
+<p>Статус: {{i.status}}</p>
+{%if i.status == 'Завершено'%}
+<p><a href="/service_record_review?id={{i.id}}">Талон обслуговування</a></p>
+{%elif i.status == 'Є відповідь'%}
+<p><a href="/check_message?id={{i.id}}">Перевірити повідомлення</a></p>
+{%endif%}
+{%endfor%}
+</body>
+</html>

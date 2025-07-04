@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/add_answer">
+    <input type="hidden" name="problem_id" value="{{id}}">
+    <textarea name="message" placeholder="Відповідь:"></textarea>
+    <button type="submit">Зберегти</button>
+</form>
+<h4>{{message}}</h4>
+</body>
+</html>

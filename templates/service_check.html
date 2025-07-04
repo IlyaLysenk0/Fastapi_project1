@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Problem: {{problem.title}}</h2>
+    <p>{{problem.description}}</p>
+    {%if problem.image_url%}
+        <img src="static/{{problem.image_url}}">
+    {%endif%}
+<small>{{problem.date_created}}</small>
+<small>Status: {{problem.status}}</small>
+
+
+<h4>Опис виконаної роботи:</h4>
+<pre>{{service_record.word_done}}</pre>
+<h4>Використані матеріали:</h4>
+<pre>{{service_record.parts_used}}</pre>
+<h2>Інформаційний талон:</h2>
+<pre>{{service_record.warranty_info}}</pre>
+</body>
+</html>

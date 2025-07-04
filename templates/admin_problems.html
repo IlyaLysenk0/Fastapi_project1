@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Мої незактриті запити:</h2>
+{%for i in problems%}
+    <h4>{{i.title}}</h4>
+    <p>{{i.description}}</p>
+    <small>{{i.date_created}}</small>
+
+    <form action="add_answer">
+    <button type="submit">Додати відповідь</button>
+      <input type="hidden" name="problem_id" value="{{i.id}}">
+    </form>
+
+    <form action="service_complete">
+    <button type="submit">Закрити проблему</button>
+      <input type="hidden" name="problem_id" value="{{i.id}}">
+    </form>
+
+{%endfor%}
+</body>
+</html>

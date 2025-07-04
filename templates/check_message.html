@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Problem: {{problem.title}}</h2>
+    <p>{{problem.description}}</p>
+    {%if problem.image_url%}
+        <img src="static/{{problem.image_url}}">
+    {%endif%}
+<small>{{problem.date_created}}</small>
+<small>Status: {{problem.status}}</small>
+
+<h2>Answer:</h2>
+<p>{{answer.message}}</p>
+<small>{{answer.date_responded}}</small>
+</body>
+</html>
